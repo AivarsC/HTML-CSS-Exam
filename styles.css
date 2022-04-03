@@ -11,15 +11,8 @@ header .header {
   justify-content: space-between;
   padding: 2rem 2rem 0 2rem;
 }
-header .header .display-none {
-  background: url("assets/menu-icon.png") center/2rem no-repeat;
-  border: none;
-  height: 2rem;
-  width: 2rem;
-}
-
-header .header .display-none {
-  background: url("assets/menu-icon.png") center/2rem no-repeat;
+header .header .hamburger {
+  background: url("assets/menu-icon.png") center/1.35rem no-repeat;
   border: none;
   height: 2rem;
   width: 2rem;
@@ -29,6 +22,15 @@ header .menu-2 {
   display: none;
 }
 
+hr.break {
+  height: 2px;
+  background-color: #eee;
+  border: none;
+  margin-bottom: 4rem;
+  margin-right: 0rem;
+  margin-left: -2rem;
+}
+
 .info {
   background: url("assets/graphic.svg") top 5px right -175px no-repeat;
   background-size: 23rem;
@@ -36,6 +38,7 @@ header .menu-2 {
   min-width: 200px;
   padding: 0 2rem;
   padding-top: 4rem;
+  padding-bottom: 5rem;
 }
 .info div {
   max-width: 250px;
@@ -51,22 +54,20 @@ header .menu-2 {
 }
 .info p {
   color: #444;
-  font-size: 1.1rem;
+  font-size: 1.12rem;
   line-height: 1.5;
   padding-bottom: 1rem;
 }
 .info button {
-  /*  reset button css  */
   border: none;
   margin: 0;
   padding: 0;
   width: auto;
   line-height: normal;
   background: none;
-  /*  set button css  */
   border: double 4px transparent;
   background-clip: content-box, border-box;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, red, rgb(228, 171, 49));
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, rgb(228, 171, 49));
   background-origin: border-box;
   border-radius: 50px;
   font-weight: bold;
@@ -75,14 +76,23 @@ header .menu-2 {
   position: relative;
   width: 180px;
 }
+.info a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+.info a:hover {
+  color: #ec4496;
+}
 
 .offer {
   background: url("assets/background.svg") no-repeat;
   background-size: cover;
-  background-position: left -50rem bottom -1rem;
+  background-position: left -45rem bottom -1rem;
   height: 20vh;
   padding: 2rem;
-  padding-top: 8.5rem;
+  padding-top: 7rem;
+  padding-bottom: 4rem;
 }
 .offer h1 {
   font-size: 2.3rem;
@@ -92,7 +102,7 @@ header .menu-2 {
 .offer p {
   font-size: 1.15rem;
   line-height: 1.5;
-  font-weight: 410;
+  font-weight: 400;
 }
 
 .companies .logos {
@@ -108,7 +118,7 @@ header .menu-2 {
 .companies .logos .img-1 {
   display: flex;
   grid-area: img-1;
-  width: 11rem;
+  width: 10rem;
 }
 .companies .logos .img-2 {
   background-color: white;
@@ -142,6 +152,7 @@ header .menu-2 {
 }
 .companies p {
   margin: 0;
+  color: #444;
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -189,7 +200,7 @@ header .menu-2 {
 .nfts .eth {
   position: relative;
   top: -4.8rem;
-  right: 7.8rem;
+  right: -11rem;
 }
 
 .nfts-smaller div {
@@ -223,15 +234,33 @@ header .menu-2 {
   font-size: 1.1rem;
   line-height: 1.5;
   padding-bottom: 1rem;
+  max-width: 182px;
 }
 .info-2 button {
-  border: 0.2rem solid transparent;
-  border-image: linear-gradient(45deg, red, rgb(228, 171, 49));
-  border-image-slice: 1;
-  font-size: 600;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  line-height: normal;
+  background: none;
+  border: double 4px transparent;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, #ed3835, rgb(228, 171, 49));
+  background-origin: border-box;
+  border-radius: 50px;
   font-weight: bold;
-  height: 4rem;
-  width: 9rem;
+  font-size: 1.2rem;
+  height: 70px;
+  position: relative;
+  width: 180px;
+}
+.info-2 a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+.info-2 a:hover {
+  color: #ec4496;
 }
 
 footer .logo-img {
@@ -289,14 +318,19 @@ footer .end aside {
   font-size: 1.1rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
+  hr.break {
+    margin-right: 2rem;
+    margin-left: 2rem;
+  }
+
   body {
     margin: 0 auto;
-    max-width: 1201px;
+    max-width: 1200px;
     padding: 2rem;
   }
 
-  .header .display-none {
+  .header .hamburger {
     display: none;
   }
 
@@ -318,6 +352,7 @@ footer .end aside {
     background-size: 37rem;
     background-position: center right 2rem;
     height: 65vh;
+    padding-bottom: 9rem;
   }
   .info div {
     max-width: 500px;
@@ -330,9 +365,10 @@ footer .end aside {
   .offer {
     background-position: center;
     border-radius: 1rem;
-    height: 13vh;
+    height: 7rem;
     margin: 0 2rem;
     padding-left: 3.5rem;
+    padding-bottom: 40px;
   }
 
   .companies .logos .img-4 {
@@ -366,7 +402,7 @@ footer .end aside {
 
   .nfts .nfts-smaller .eth {
     height: 1.3rem;
-    right: 9.3rem;
+    right: -9rem;
   }
 
   .info-2 {
@@ -379,6 +415,9 @@ footer .end aside {
   }
   .info-2 div h1 {
     padding-top: 1rem;
+  }
+  .info-2 div p {
+    max-width: 90%;
   }
 
   footer table {
